@@ -1,0 +1,20 @@
+<h1>Home</h1>
+
+<div id="fridgeForm">
+    <form id="fridgeContents">
+        <div class="row">
+            What is in your Fridge?
+            <div class="col-8 col-sm-5">
+                <input id="user-input" class="form-control" type="text" placeholder="2 eggs"
+                    aria-label="default input example">
+            </div>
+            <div class="col-12 col-sm-3">
+                {{!-- <button type="submit" class="btn btn-primary" onclick="addInput()">Add</button> --}}
+                {{!-- <button type="submit" class="btn btn-primary">Add</button> --}}
+                <button id="GenerateRecipe" type="submit" class="btn btn-primary">Generate Recipe</button>
+            </div>
+        </div>
+        <div id="response" class="row">
+        </div>
+    </form>
+</div>
