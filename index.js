@@ -3,15 +3,6 @@ const express = require('express')
 const expressHandlebars = require('express-handlebars')
 const handlers = require('./lib/handlers')
 
-// const openAi = require('openai')
-
-// const configuration = new openAi.Configuration({
-//     organization: process.env.OPENAI_ORGANIZATION,
-//     apiKey: process.env.OPENAI_API_KEY,
-// })
-
-// const openAIClient = new openAi.OpenAIApi(configuration);
-
 const app = express()
 app.use(express.json())
 
@@ -36,10 +27,8 @@ app.use('/ricos-menu', handlers)
 app.post('/generate-data', handlers)
 // sends recipe to database
 app.post('/db', handlers)
-
 // custom 404 page
 app.use('404', handlers)
-
 // custom 500 page
 app.use('500', handlers)
 

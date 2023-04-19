@@ -32,7 +32,6 @@ $("#fridgeContents").submit(async (e) => {
 
 function parseData(data) {
     let dataArr = data.split("\n")
-
     let recipeName = dataArr[0]
     let ingredientsArr = []
     let instructionsArr = []
@@ -40,7 +39,6 @@ function parseData(data) {
 
     for (let i = 3; i < dataArr.length; i++) {
         let obj = dataArr[i]
-
         counter += 1
         if (obj == 'Instructions' || obj == 'Instructions:' || obj == 'Directions:') {
             break
