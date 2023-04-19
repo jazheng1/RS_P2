@@ -1,20 +1,16 @@
-<h1>Home</h1>
-
-<div id="fridgeForm">
-    <form id="fridgeContents">
-        <div class="row">
-            What is in your Fridge?
-            <div class="col-8 col-sm-5">
-                <input id="user-input" class="form-control" type="text" placeholder="2 eggs"
-                    aria-label="default input example">
-            </div>
-            <div class="col-12 col-sm-3">
-                {{!-- <button type="submit" class="btn btn-primary" onclick="addInput()">Add</button> --}}
-                {{!-- <button type="submit" class="btn btn-primary">Add</button> --}}
-                <button id="GenerateRecipe" type="submit" class="btn btn-primary">Generate Recipe</button>
-            </div>
+<div id="intro" class="row">
+    <div speech-bubble pright acenter id="speech-bubble-intro" class="offset-2 col-5">
+        <h2>Hi there!</h2>
+        <h2>What can Rico do for you today?</h2>
+    </div>
+    <div id="rico-home" class="col-3"><img src="/img/rico.png" alt="the mascot Rico"></div>
+    <br>
+    <div id="choice" class="row">
+        <div class="offset-1 col-5">
+            <a href="/ricos-lab" role="button" class="btn btn-primary"><h2>Rico's Lab</h2></a>
         </div>
-        <div id="response" class="row">
+        <div class="offset-1 col-5">
+            <a href="ricos-menu" role="button" class="btn btn-primary"><h2>Rico's Menu</h2></a>
         </div>
-    </form>
+    </div>
 </div>

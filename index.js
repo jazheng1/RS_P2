@@ -28,6 +28,10 @@ app.use(express.static(__dirname + '/public'))
 
 // landing page
 app.use('/', handlers)
+// generate page
+app.use('/ricos-lab', handlers)
+// explore page
+app.use('/ricos-menu', handlers)
 
 app.post('/submit-data', handlers)
 
