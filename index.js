@@ -2,15 +2,7 @@ require('dotenv').config
 const express = require('express')
 const expressHandlebars = require('express-handlebars')
 const handlers = require('./lib/handlers')
-
-// const openAi = require('openai')
-
-// const configuration = new openAi.Configuration({
-//     organization: process.env.OPENAI_ORGANIZATION,
-//     apiKey: process.env.OPENAI_API_KEY,
-// })
-
-// const openAIClient = new openAi.OpenAIApi(configuration);
+// const { MongoClient, ServerApiVersion } = require('mongodb');
 
 const app = express()
 app.use(express.json())

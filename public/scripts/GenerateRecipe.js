@@ -5,10 +5,10 @@ $("#fridgeContents").submit(async (e) => {
     // prevent default behavior (the loading of a new page)
     e.preventDefault();
     let input = document.getElementById("user-input").value;
-    console.log("input:", input)
     let url = baseUrl;
+    console.log("input:", input, url)
 
-    fetch(url + 'submit-data', {
+    fetch(url + '/submit-data', {
         method: "POST",
         headers: {
             "Accept": "application/json",
