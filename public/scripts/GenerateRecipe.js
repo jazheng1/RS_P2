@@ -22,7 +22,7 @@ $("#fridgeContents").submit(async (e) => {
         }
     ).then(
         function (data) {
-            console.log("Success! ", data.fromServer)
+            console.log("Success Getting from ChatGPT!")
             let inputObj = parseData(data.fromServer)
             writeToDataBase(inputObj, url)
             writeToPage(inputObj)
@@ -84,7 +84,7 @@ function writeToPage(inputObj) {
     </div>`
     let templateFunction = Handlebars.compile(template);
     let html = templateFunction(inputObj);
-    console.log(html);
+    // console.log(html);
 
     document.querySelector("#response").innerHTML = html;
 }
@@ -104,7 +104,7 @@ function writeToDataBase(inputObj, url) {
         }
     ).then(
         function (data) {
-            console.log("Success!")
+            console.log("Success Sending to Database")
         }
     )
 }
