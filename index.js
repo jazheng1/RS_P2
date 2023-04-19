@@ -2,7 +2,6 @@ require('dotenv').config
 const express = require('express')
 const expressHandlebars = require('express-handlebars')
 const handlers = require('./lib/handlers')
-// const { MongoClient, ServerApiVersion } = require('mongodb');
 
 const app = express()
 app.use(express.json())
@@ -24,12 +23,12 @@ app.use('/', handlers)
 app.use('/ricos-lab', handlers)
 // explore page
 app.use('/ricos-menu', handlers)
-
-app.post('/submit-data', handlers)
-
+// calls chaptGPT to generate recipe
+app.post('/generate-data', handlers)
+// sends recipe to database
+app.post('/db', handlers)
 // custom 404 page
 app.use('404', handlers)
-
 // custom 500 page
 app.use('500', handlers)
 
