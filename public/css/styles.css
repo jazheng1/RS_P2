@@ -128,22 +128,73 @@ html, body {
     background-color: #F44D0B !important;
 }
 /* home page */
+h1 {
+  color: white;
+}
+
 #speech-bubble-intro {
-    position: relative;
-    top: 170px;     
+    position: relative; 
     height: 200px;
     padding-top: 30px;
     padding-left:40px ;
 }
+#rico-home {
+  position: relative;
+  margin-left: 140px;
+  margin-right: 40px;
+  top: 20px;
+}
+
+#link {
+  position: relative;
+  left: 85px;
+  top: 210px;
+}
 
 #intro {
     position: relative;
-    top: 100px;
+    top: 80px;
 }
 
-#choice {
-    position: relative;
-    top: 150px;
-    left: 50px;
+/* explore page */
+#searchBar, #to-lab {
+  position: relative;
+  top: 50px;     
+  padding-left:40px ;
 }
 
+#item {
+  margin: 20px;
+}
+
+#rico-explore {
+  height: 200px;
+}
+
+hr {
+  position: relative;
+  bottom: 80px;
+  width: 80%;
+  height: 3px;
+  background: black;
+}
+
+#menu-items {
+  position: relative;
+  top: -70px;
+  width: 90%;
+}
+
+#search-input {
+  position: relative;
+  height: 50px;
+}
+
+/* generate page */
+#speech-bubble-create {
+  position: relative;
+  top: 130px;     
+  height: 250px;
+  padding-top: 30px;
+  padding-left:40px ;
+}
