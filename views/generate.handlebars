@@ -1,20 +1,25 @@
-
-<div id="fridgeForm">
-    <form id="fridgeContents">
-        <div class="row">
-            <h2>What is in your Fridge?</h2>
-            <div id="items" class="col-8 col-sm-5">
-                <input id="user-input" class="form-control" type="text" placeholder="2 eggs"
-                    aria-label="default input example">
-            </div>
-            <div class="col-12 col-sm-12">  
-                {{!-- <button type="submit" class="btn btn-primary" onclick="addInput()">Add</button> --}}
-                <button id="GenerateRecipe" type="submit" class="btn btn-primary">Generate Recipe</button>
-            </div>
+<div id="create" class="row">
+    <div speech-bubble pright acenter id="speech-bubble-create" class="offset-2 col-5">
+        <h2>Its Magic Time! </h2>
+        <h2>Give me an item in your fridge</h2>
+        <br>
+        <div id="fridgeForm">
+            <form id="fridgeContents">
+                <div class="row">
+                    <div class="col-sm-12 col-md-7">
+                        <input id="user-input" class="form-control" type="text" placeholder="ex. eggs"
+                        aria-label="default input example">
+                    </div>
+                    <div class="col-sm-12 col-md-5">
+                        <button id="GenerateRecipe" type="submit" class="btn btn-primary">Generate Recipe</button>
+                    </div>
+                </div>
+            </form>
         </div>
-    </form>
+    </div>
+    <div id="rico-create" class="col-3"><a href="/"><img src="/img/rico.png" alt="the mascot Rico"></a></div>
+    <br>
+    <div id="response" class="row"></div>
+    <div class="offset-5 col-4"><a href="ricos-menu" role="button" class="btn btn-primary"><h2>Rico's Menu</h2></a></div>
 </div>
 
-<div id="response" class="row">
-
-</div>

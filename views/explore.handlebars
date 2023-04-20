@@ -1,1 +1,34 @@
-<h2>Explore</h2>
+<div id="explore-top" class="row">
+    <div id="searchBar" class="col-7">
+        <form id="search-form">
+            <div class="row">
+                <div class="col-8">
+                    <input id="search-input" class="form-control" type="text" placeholder="eggs"
+                        aria-label="default input example">
+                </div>
+                <div class="col-4">  
+                    {{!-- <button type="submit" class="btn btn-primary" onclick="addInput()">Add</button> --}}
+                    <button id="search" type="submit" class="btn btn-primary"><h4>Search</h4></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="to-lab" class="col-3">  
+         <a href="/ricos-lab" role="button" class="btn btn-primary"><h4>Rico's Lab</h4></a>
+    </div>
+    <div id="rico-explore" class="col-2"><a href="/"><img src="/img/rico.png" alt="the mascot Rico"></a></div>
+</div>   
+
+ <hr class="solid">
+
+<div id="menu-items" class="row">
+    {{#each name }}
+    <div id="item" class="col-3 card" style="width: 18rem;">
+        <img src="/img/plate.png" class="card-img-top" alt="plate">
+        <div class="card-body">
+            <h5 class="card-title">{{this}}</h5>
+            <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
