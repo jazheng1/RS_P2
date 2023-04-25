@@ -15,7 +15,8 @@ app.engine('handlebars', expressHandlebars.engine({
 app.set('view engine', 'handlebars')
 
 // static middleware
-app.use(express.static(__dirname + '/public'))
+// app.use(express.static(__dirname + './public'))
+app.use(express.static('public'))
 
 // landing page
 app.use('/', handlers)
@@ -43,10 +44,10 @@ if (require.main === module) {
     module.exports = app
 }
 
-export default function handler(request, response) {
-    response.status(200).json({
-      body: request.body,
-      query: request.query,
-      cookies: request.cookies,
-    });
-  }
+// export default function handler(request, response) {
+//     response.status(200).json({
+//       body: request.body,
+//       query: request.query,
+//       cookies: request.cookies,
+//     });
+//   }
