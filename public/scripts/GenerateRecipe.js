@@ -17,7 +17,7 @@ $("#fridgeContents").submit(async (e) => {
         body: JSON.stringify({ "input": input })
     }).then(
         function (res) {
-            console.log('first fetch', res)
+            console.log('generateRecipe fetch', res)
             return res.json()
         }
     ).then(
@@ -33,6 +33,8 @@ $("#fridgeContents").submit(async (e) => {
 function parseData(data) {
     let dataArr = data.split("\n")
     let recipeName = dataArr[0]
+    recipeName.replaceAll(":", "");
+    recipeName.replaceAll("&", "and")
     let ingredientsArr = []
     let instructionsArr = []
     let counter = 2;
@@ -99,7 +101,7 @@ function writeToDataBase(inputObj, url) {
         body: JSON.stringify({ "inputObj": inputObj })
     }).then(
         function (res) {
-            console.log('second fetch', res)
+            console.log('sent to database fetch', res)
             return res.json()
         }
     ).then(

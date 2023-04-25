@@ -24,7 +24,9 @@ app.use('/ricos-lab', handlers)
 // explore page
 app.use('/ricos-menu', handlers)
 //recipe pages
-app.use('/recipe', handlers)
+app.use('/ricos-menu/recipe', handlers)
+//gets recipe from databse
+// app.use('/ricos-menu/recipeItem', handlers)
 // calls chaptGPT to generate recipe
 app.post('/generate-data', handlers)
 // sends recipe to database
