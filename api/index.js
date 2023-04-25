@@ -1,7 +1,7 @@
 require('dotenv').config
 const express = require('express')
 const expressHandlebars = require('express-handlebars')
-const handlers = require('./lib/handlers')
+const handlers = require('../lib/handlers')
 
 const app = express()
 app.use(express.json())
@@ -42,3 +42,11 @@ if (require.main === module) {
 } else {
     module.exports = app
 }
+
+export default function handler(request, response) {
+    response.status(200).json({
+      body: request.body,
+      query: request.query,
+      cookies: request.cookies,
+    });
+  }
