@@ -10,5 +10,5 @@ The aim of Rico's Lab is to allow people to explore goofy recipes that are gener
 - run npm install
 - to run it locally:
     ```
-       nodemon or npm index.js
+       npm start
      ```
