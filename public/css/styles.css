@@ -160,7 +160,7 @@ h1 {
 #searchBar, #to-lab {
   position: relative;
   top: 50px;     
-  padding-left:40px ;
+  padding-left:20px ;
 }
 
 #item {
@@ -168,21 +168,28 @@ h1 {
 }
 
 #rico-explore {
+  position: relative;
   height: 200px;
+  top: 10px;
+  right: 10px;
 }
 
-hr {
+.solid {
   position: relative;
-  bottom: 80px;
-  width: 80%;
+  bottom: 35px;
   height: 3px;
   background: black;
 }
 
-#menu-items {
+#speech-bubble-explore {
   position: relative;
-  top: -70px;
-  width: 90%;
+  top: 50px;
+  right: 20px;
+  width: 300px;
+  height: 60px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
 }
 
 #search-input {
@@ -197,4 +204,34 @@ hr {
   height: 250px;
   padding-top: 30px;
   padding-left:40px ;
+}
+
+/* recipe page */
+#return-link {
+  text-decoration: none;
+  color: black;
+}
+#return-link:hover {
+  color: #F44D0B;
+}
+#speech-bubble-recipe {
+  text-align: center;
+  color: white;
+  padding-top: 30px;
+  height: 150px;
+}
+
+.recipe-hr {  
+  position: relative;
+  height: 3px;
+  background: black;
+}
+
+.carousel{
+  border-radius: 10px;
+  border: #F44D0B;
+}
+
+.carousel-control-next-icon {
+  color: black;
 }

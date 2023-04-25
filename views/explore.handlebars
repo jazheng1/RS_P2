@@ -1,9 +1,12 @@
 <div id="explore-top" class="row">
     <div id="searchBar" class="col-7">
-        <form id="search-form">
+        <form id="search-form" action="/ricos-menu" method="GET">
             <div class="row">
                 <div class="col-8">
-                    <input id="search-input" class="form-control" type="text" placeholder="eggs"
+                    <input id="search-input" class="form-control" type="text" name="search" placeholder="eggs"
+                        {{#if searchTerm}}
+                            value="{{searchTerm}}"
+                        {{/if}}
                         aria-label="default input example">
                 </div>
                 <div class="col-4">  
@@ -13,21 +16,21 @@
             </div>
         </form>
     </div>
-    <div id="to-lab" class="col-3">  
-         <a href="/ricos-lab" role="button" class="btn btn-primary"><h4>Rico's Lab</h4></a>
-    </div>
-    <div id="rico-explore" class="col-2"><a href="/"><img src="/img/rico.png" alt="the mascot Rico"></a></div>
+
+    <a speech-bubble pright acenter id="speech-bubble-explore" class="col-2" href="/ricos-lab" role="button" class="btn btn-primary"><h4>Go to Rico's Lab</h4></a>      
+
+    <div id="rico-explore" class="col-1 img-fluid"><a href="/"><img src="/img/rico.png" width="160px" height="160px" alt="the mascot Rico"></a></div>
 </div>   
 
- <hr class="solid">
+<hr class="solid">
 
 <div id="menu-items" class="row">
-    {{#each name }}
+    {{#each recipes }}
     <div id="item" class="col-3 card" style="width: 18rem;">
         <img src="/img/plate.png" class="card-img-top" alt="plate">
         <div class="card-body">
-            <h5 class="card-title">{{this}}</h5>
-            <a href="#" class="btn btn-primary">Learn More</a>
+            <h5 id="recipe-name" class="card-title">{{this.name}}</h5>
+            <a id="getRecipe" href="/ricos-menu/recipe/{{this.id}}/{{this.slug}}" class="btn btn-primary">Learn More</a>
         </div>
     </div>
     {{/each}}
