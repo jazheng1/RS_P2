@@ -1,7 +1,7 @@
 require('dotenv').config
 const express = require('express')
 const expressHandlebars = require('express-handlebars')
-const handlers = require('./lib/handlers')
+const handlers = require('./lib/handlers.js')
 
 const app = express()
 app.use(express.json())
@@ -35,19 +35,9 @@ app.use('404', handlers)
 // custom 500 page
 app.use('500', handlers)
 
-if (require.main === module) {
-    app.listen(port, () => {
-        console.log(`Express started on http://localhost:${port}` +
-            '; press Ctrl-C to terminate.')
-    })
-} else {
-    module.exports = app
-}
+app.listen(port, () => {
+    console.log(`Express started on http://localhost:${port}` +
+        '; press Ctrl-C to terminate.')
+})
 
-// export default function handler(request, response) {
-//     response.status(200).json({
-//       body: request.body,
-//       query: request.query,
-//       cookies: request.cookies,
-//     });
-//   }
+module.exports = app
