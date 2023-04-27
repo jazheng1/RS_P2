@@ -1,7 +1,7 @@
 require('dotenv').config
 const express = require('express')
 const expressHandlebars = require('express-handlebars')
-const handlers = require('../lib/handlers')
+const handlers = require('./lib/handlers')
 
 const app = express()
 app.use(express.json())
@@ -15,8 +15,8 @@ app.engine('handlebars', expressHandlebars.engine({
 app.set('view engine', 'handlebars')
 
 // static middleware
-// app.use(express.static(__dirname + './public'))
-app.use(express.static('public'))
+app.use(express.static(__dirname + '/public'))
+// app.use(express.static('public'))
 
 // landing page
 app.use('/', handlers)
