@@ -26,6 +26,7 @@ $("#fridgeContents").submit(async (e) => {
             let inputObj = parseData(data.fromServer)
             writeToDataBase(inputObj, url)
             writeToPage(inputObj)
+            document.getElementById("response").style.visibility = "visible"
         }
     )
 })
@@ -67,7 +68,7 @@ function parseData(data) {
 function writeToPage(inputObj) {
     let template = `<h2>{{recipeName}}</h2>
     <div class="row">
-        <div class="offset-1 col-3">
+        <div class="col-sm-12 col-md-3">
             <h4>Ingredients</h4>
             <ul class="ingredients">
                 {{#each ingredients}}
@@ -75,7 +76,7 @@ function writeToPage(inputObj) {
                 {{/each}}
             </ul>
         </div>
-        <div class="col-7">
+        <div class="col-sm-12 col-md-7">
             <h4>Instructions</h4>
             <ul class="instructions">
                 {{#each instructions}}
