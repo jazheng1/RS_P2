@@ -155,9 +155,9 @@ h1 {
   margin: 10px;
 }
 /* explore page */
-#like-button {
+.like-button {
   position: relative;
-  left:75%
+  left:75%;
 }
 #searchBar {
   position: relative;
