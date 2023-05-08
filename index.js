@@ -2,6 +2,7 @@ require('dotenv').config
 const express = require('express')
 const expressHandlebars = require('express-handlebars')
 const handlers = require('./lib/handlers.js')
+// const path = require('path');
 
 const app = express()
 app.use(express.json())
