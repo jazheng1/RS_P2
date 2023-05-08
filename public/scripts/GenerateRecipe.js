@@ -9,7 +9,6 @@ $("#fridgeContents").submit(async (e) => {
     btn.innerHTML = `<div class="spinner-border text-light" role="status">
                     <span class="sr-only"></span>
                     </div>`
-    console.log("input:", input)
     let url = baseUrl;
 
     fetch(url + '/generate-data', {
@@ -39,8 +38,8 @@ $("#fridgeContents").submit(async (e) => {
 function parseData(data) {
     let dataArr = data.split("\n")
     let recipeName = dataArr[0]
-    recipeName.replaceAll(":", "");
-    recipeName.replaceAll("&", "and")
+    recipleName = recipeName.replaceAll(":", "");
+    recipleName = recipeName.replaceAll("&", "and")
     let ingredientsArr = []
     let instructionsArr = []
     let counter = 2;
@@ -92,7 +91,6 @@ function writeToPage(inputObj) {
     </div>`
     let templateFunction = Handlebars.compile(template);
     let html = templateFunction(inputObj);
-    // console.log(html);
 
     document.querySelector("#response").innerHTML = html;
 }
