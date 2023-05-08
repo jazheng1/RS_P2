@@ -11,6 +11,7 @@ I used the ChatGPT API to generate silly recipes that people can try base on an 
 https://www.figma.com/file/4czV8e09uHzVsF58SVmcoj/Radical-Software%3A-P2?type=design&t=LPddzngL4P4WtRoS-1
 
 ## Video Demonstration
+https://drive.google.com/file/d/19_RDwDMGUNjPRb1L4lbcFohLYMsHONn6/view?usp=sharing
 
 ## To Run
 - make sure you have the latest version of node on your desktop
