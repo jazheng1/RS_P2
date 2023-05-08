@@ -26,6 +26,10 @@ app.use('/ricos-lab', handlers)
 app.use('/ricos-menu', handlers)
 //recipe pages
 app.use('/ricos-menu/recipe', handlers)
+// update likes on page
+app.post('rico-menu/', handlers)
+// app.post('rico-menu/add-like', handlers)
+app.post('rico-menu/add-like', handlers)
 // calls chaptGPT to generate recipe
 app.post('/generate-data', handlers)
 // sends recipe to database

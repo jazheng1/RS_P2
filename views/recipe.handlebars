@@ -53,6 +53,20 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+    <div>
+      {{#each recipes}}
+      <form id="like-form" method="POST">
+          {{!-- <input type="hidden" name="post_id" value="{{post.id}}" /> --}}
+          <input type="hidden" id="like-item" name="likeItem" value="{{this.name}}" />
+          <button id="like-button" type="submit" class="btn btn-danger">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-heart" viewBox="0 0 16 16">
+                  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+              </svg>
+              <span id="num-likes">{{this.likes}}</span>
+          </button>
+      </form>
+      {{/each}}
+    </div>
   </div>
   <div id="upload-img" class="row">
     <div class="col-sm-12 col-md-8">
@@ -90,15 +104,17 @@
     </div>
   </div>
 
+  {{!-- future iteration --}}
+{{!-- 
   <div id="recipe-comments">
     <h2>Comments</h2>
   </div>
   <hr class="comments-hr">
   <div id="input-comment">
-    <form action="POST">
+    <form id="comment-form" action="POST">
       <div class="row">
         <div class="col-sm-12 col-md-7">
-          <input id="user-input" class="form-control" type="text" placeholder="ex. eggs"
+          <input id="user-comment" class="form-control" type="text" placeholder="ex. eggs"
             aria-label="default input example">
         </div>
         <div class="col-sm-12 col-md-5">
@@ -110,4 +126,4 @@
   <div id="user-comments">
 
   </div>
-</div>
+</div> --}}
