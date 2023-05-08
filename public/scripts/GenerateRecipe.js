@@ -5,6 +5,10 @@ $("#fridgeContents").submit(async (e) => {
     // prevent default behavior (the loading of a new page)
     e.preventDefault();
     let input = document.getElementById("user-input").value;
+    let btn = document.getElementById("GenerateRecipe");
+    btn.innerHTML = `<div class="spinner-border text-light" role="status">
+                    <span class="sr-only"></span>
+                    </div>`
     console.log("input:", input)
     let url = baseUrl;
 
@@ -25,6 +29,7 @@ $("#fridgeContents").submit(async (e) => {
             console.log("Success Getting from ChatGPT!")
             let inputObj = parseData(data.fromServer)
             writeToDataBase(inputObj, url)
+            btn.innerHTML = `Create`
             writeToPage(inputObj)
             document.getElementById("response").style.visibility = "visible"
         }
