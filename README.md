@@ -8,6 +8,7 @@ The aim of Rico's Lab is to allow people to explore goofy recipes that are gener
 I used the ChatGPT API to generate silly recipes that people can try base on an item that they input. That item could be something in their fridge or something they would like to generate a silly recipe with. Once the recipe has been generated, it will be added to a MongoDB Atlas database, where people can later explore other generated recipes or search for a specific thing they are looking for.
 
 ## Figma
+Early page design
 https://www.figma.com/file/4czV8e09uHzVsF58SVmcoj/Radical-Software%3A-P2?type=design&t=LPddzngL4P4WtRoS-1
 
 ## Video Demonstration
